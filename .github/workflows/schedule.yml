@@ -14,13 +14,14 @@ on:
 jobs:
 
   build:
-    name: Upddate-gist
+    name: Update-gist
     runs-on: ubuntu-latest
     env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GIST_ID: 826eaf5ce766a3a04314ed1cc6c39476
           STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
           STEAM_ID: ${{ secrets.STEAM_ID }}
+          APP_ID: "1318790,774181,620,728880,477160"
     steps:
 
     - name: Set up Go 1.x
