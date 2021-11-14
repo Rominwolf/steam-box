@@ -180,30 +180,38 @@ func pad(s, pad string, targetLength int) string {
 func getNameEmoji(id int, name string) string {
 	// hard code some game's emoji
 	var nameEmojiMap = map[int]string{
-		70:      "λ ",     // Half-Life
-		220:     "λ² ",    // Half-Life 2
-		500:     "🧟 ",     // Left 4 Dead
-		550:     "🧟 ",     // Left 4 Dead 2
-		570:     "⚔️ ",    // Dota 2
-		730:     "🔫 ",     // CS:GO
-		8930:    "🌏 ",     // Sid Meier's Civilization V
-		252950:  "🚀 ",     // Rocket League
-		269950:  "✈️ ",    // X-Plane 11
-		271590:  "🚓 ",     // GTA 5
-		359550:  "🔫 ",     // Tom Clancy's Rainbow Six Siege
-		431960:  "💻 ",     // Wallpaper Engine
-		578080:  "🍳 ",     // PUBG
-		945360:  "🕵️‍♂️ ", // Among Us
-		1250410: "🛩️ ",    // Microsoft Flight Simulator
-		1091500: "🦾 ",     // Cyberpunk 2077
-		774181: "🎶 ", // Rhythm Doctor
-		477160: "🚀 ", // Human: Fall Flat
-		728880: "🍳 ", // Overcoocked 2
-		620: "🔫 ", // Portal 2
+		70:      	"λ",	// Half-Life
+		220:     	"λ²",	// Half-Life 2
+		500:     	"🧟",	// Left 4 Dead
+		550:     	"🧟",   // Left 4 Dead 2
+		570:     	"⚔️",	// Dota 2
+		730:     	"🔫",   // CS:GO
+		8930:    	"🌏",   // Sid Meier's Civilization V
+		252950:  	"🚀",   // Rocket League
+		269950:  	"✈️",   // X-Plane 11
+		271590:  	"🚓",   // GTA 5
+		359550:  	"🔫",   // Tom Clancy's Rainbow Six Siege
+		431960:  	"💻",   // Wallpaper Engine
+		578080:  	"🍳",   // PUBG
+		945360:  	"🕵️‍♂️", 	// Among Us
+		1250410: 	"🛩️",   // Microsoft Flight Simulator
+		1091500: 	"🦾",   // Cyberpunk 2077
+		774181: 	"🎶",   // Rhythm Doctor
+		477160: 	"🚀", 	// Human: Fall Flat
+		728880: 	"🍳", 	// Overcoocked 2
+		400: 		"🔫", 	// Portal
+		620: 		"🔫", 	// Portal 2
+		1016920:	"⛏", 	// Unrailed!
+		211820:		"🚀", 	// Starbound
+		4000:		"🛠", 	// Garry's Mod
+		1483870:	"🎨", 	// Draw & Guess
+		698780:		"❤", 	// Doki Doki Literature Club
+		413150:		"👨‍🌾", 	// Stardew Valley
+		381210:		"🔇", 	// Dead by Daylight
 	}
 
 	if emoji, ok := nameEmojiMap[id]; ok {
-		return emoji + name
+		return emoji + " " + name
 	}
 
 	if name == "Unknown Game" {
